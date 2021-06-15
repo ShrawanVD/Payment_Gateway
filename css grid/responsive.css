@@ -1,0 +1,43 @@
+
+
+@media(max-width: 81rem) {
+    .showcasebox h1{
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 62rem){
+    
+
+    .showcase{
+        display: grid;
+        grid-template-areas: 
+        'showcase showcase'
+        'box_a box_b';
+    }
+
+    .moto{
+        display: grid;
+        grid-template-areas: repeat(3, fr) minmax(2fr);
+    }
+}
+
+@media(max-width: 40rem){
+    .sparks .title2{
+        display: block;
+    }
+    .nav_header nav ul{
+        display: inline-block;
+    }
+    .nav_header nav ul a{
+        margin: 10px 0; 
+        border: 2px solid brown;
+        box-shadow: var(--shadow);
+    }
+}
+
+@media(max-width: 35rem){
+    .showcasebox h1{
+        font-size: 22px;
+    }
+}

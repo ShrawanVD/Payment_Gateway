@@ -1,0 +1,339 @@
+/* For paragraphs */
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+font-family: 'Lobster', cursive; */
+
+/* For Headings */
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&display=swap'); 
+font-family: 'Acme', sans-serif; */
+
+/* Variables */
+:root{
+    --primary:  #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 10px 10px 17px rgba(104, 104, 104, 0.8)
+    /* --hover: 3px solid powderblue; */
+}
+/* ............................ */
+
+/* core sections */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--dark);
+}
+
+body{
+    /* background-color: rgb(243, 219, 219); */
+    background-image: linear-gradient(  rgba(236, 143, 245, 0.808) 45%, rgb(78, 78, 228));
+    margin: 30px 20px;
+}
+
+.btn{
+    background-color: var(--dark);
+    padding: 0.6rem 1.3rem;
+    border: 0;
+    max-width: 95px;
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%  ;
+}
+
+.btn:hover{
+    transition: 1s;
+}
+
+.btn a{
+    color: var(--light);
+    text-decoration: none;
+}
+
+img{
+    max-width: 100vw;
+}
+
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+
+ul a{
+    text-decoration: none;
+}
+/* ......................... */
+
+/* ................................individual entities.................................. */
+
+/* header */
+.pure_header{
+    display: flex;
+    background: rgb(194, 188, 188);
+}
+
+
+
+
+
+.pure_header .title{
+    margin: 16px 10px;
+    /* animation: aagepiche 2s liner infinite alternate; */
+}
+
+/* @keyframes aagepiche {
+    from{padding-left: 10px;}
+    to{padding-right: 10px;}
+} */
+
+
+
+
+
+.pure_header .title h2{
+    text-decoration: underline;
+    font-family: 'Acme', sans-serif;
+}
+
+.pure_header .title span{
+    margin: 13px;
+}
+
+/* navigation */
+.nav_header{
+    margin: auto;
+}
+
+.nav_header nav ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    min-width: 70vw;
+    height: 5vh;
+    grid-gap: 70px
+}
+
+.nav_header nav ul a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--dark);
+    text-transform: uppercase;
+    box-shadow: var(--shadow);
+    background-color: var(--primary);
+}
+
+.nav_header nav ul a:hover{
+    background: red;
+    transition: 2s;
+}
+/* ...................................................................... */
+
+/* showcase */
+.showcase{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+        'showcase showcase box_a'
+        'showcase showcase box_b';
+}
+
+.showcasebox{
+    grid-area: showcase;
+    border: 2px solid var(--dark);
+    min-width: 62vw;
+    min-height: 50vh;
+    background: url(/images/showcase.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.showcasebox:hover{
+    border: 8px solid powderblue;
+}
+
+.showcasebox h1{    
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: var(--light);
+    text-decoration: underline;
+    /* margin-bottom: 18px;
+    margin-top: 230px; */
+    font-size: 53px;
+}
+
+.showcasebox p{   
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: var(--light); 
+    text-align: center;
+    font-weight: 900;
+}
+
+.showcasebox .btn{    
+    margin: 14px auto;
+    min-width: 10vw;
+    text-align: center;
+    min-width: 284px;
+    height: 8vh;
+    font-size: 26px;
+    z-index: 1;
+}
+
+.showcasebox .btn a{    
+    margin: auto -11px;
+}
+
+.boxA, .boxB{
+    border: 2px solid var(--dark);
+    text-align: center;
+    padding: 5px 10px;
+    background-color: var(--primary);
+}
+
+.boxA:hover, .boxB:hover{
+    border: 8px solid rgba(48, 45, 11, 0.651);
+}
+
+.boxA{
+    grid-area: box_a;
+    margin-bottom: 10px;
+}
+
+.boxB{
+    grid-area: box_b;
+}
+
+.boxA h4, .boxB h4{
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.boxA .btn, .boxB .btn{
+    margin-top: 20px;
+
+}
+
+.all .btn{
+    margin: auto;
+    box-shadow: var(--shadow);
+    border-radius: % 0% 100% 0% / 100% 0% 100% 0% ;
+}
+
+.all .btn:hover, .showcasebox .btn:hover{
+    background: red;
+}
+/* ................................................... */
+
+/* the moto section */
+.moto{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    
+}
+
+.moto .moto1:hover{
+    border: 8px solid rgba(147, 220, 238, 0.651);
+}
+
+.moto .moto1{
+    border: 2px solid var(--dark);
+    /* margin: 10px 42px; */
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+
+}
+
+.moto .btn{
+    margin: auto;
+    box-shadow: var(--shadow);
+    border-radius: % 0% 100% 0% / 100% 0% 100% 0% ;
+}
+
+.moto .btn:hover{
+    background: red;
+    
+}
+
+/* ...................................................... */
+
+/* About spark foundation section */
+.sparks{
+    background: black;
+    display: grid;
+    min-width: 90vw;
+    grid-template-columns:  repeat(4, 1fr);
+    /* padding: 0 20px; */
+    padding: auto;
+    text-align: center;
+}
+
+
+.column1 .title2 h2, .column1 .title2 p{
+    color: var(--light);
+}
+
+.column2 .title2 h2, .column2 .title2 ul a{
+    color: var(--light);
+}
+
+.column3 .title2 h2, .column3 .title2 ul a{
+    color: var(--light);
+}
+
+.column4 .title2 h2, .column4 .title2 ul a{
+    color: var(--light);
+}
+
+.column1, .column2, .column3, .column4{
+    padding: 10px;
+}
+
+.column1 .title2 h2{
+    color: darkorange;
+    padding-bottom: 20px;
+} 
+
+.column1 .social_media img{
+    margin-top: 20px;
+    border-radius: 69% 30% 13% 80% / 24% 53% 48% 66% ;
+}
+
+.column2 .title2, .column3 .title2, .column4 .title2 {
+    padding: 10px;
+}
+
+.column2 .title2 ul, .column3 .title2 ul, .column4 .title2 ul {
+    padding: 20px 0;
+} 
+
+/* .column2 .title2 ul a, .column3 .title2 ul a, .column4 .title2 ul a{
+    text-align: center;
+}  */
+
+/* .column4 .title2 a{
+    padding: 20px 0;
+} */
+/* ........................................... */
+
+/* footer section */
+.foot{
+    background-color: black;
+    min-height: 10vh;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot p{
+    color: white;
+    text-align: center;
+}

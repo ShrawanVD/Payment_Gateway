@@ -1,0 +1,131 @@
+/* overflow hidden property has automatically cleared the list styles as those were the items moving out of the .showcase box..... to make a demo u can comment out this property to see the results */
+
+
+/* to add the moving objects in the background of the particular division (here, .showcasebox) */
+/* there are some pre-requsities; they are as follows:
+1. Make the .showcase position:relative, as the moving particles demands themselves as positive for introducing themselves in the particalar division, and if you wouldn't did so, then the particle will be formed at the window level........... or or you can give relative position to your animated box and can check the results.
+2. As we can see, once the animation is started, the animated div is turned out to be background and the animation takes as a layer on it which makes very difficult to access anything from the orig background(here, button), so there is one beautiful way to resolve it. and that is by giving z-index value to the one whom you want to access */
+
+
+.showcasebox .box_areas{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.showcasebox .box_areas li{
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(233, 168, 83, 0.541);
+    animation: animate 20s linear infinite;
+    bottom: -10px;
+}
+
+.showcasebox .box_areas li:nth-child(1){
+    width: 25px;
+    height: 25px;
+    left: 10%;
+    animation-delay: 0s;
+}
+.showcasebox .box_areas li:nth-child(2){
+    width: 45px;
+    height: 45px;
+    left: 15%;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+.showcasebox .box_areas li:nth-child(3){
+    width: 35px;
+    height: 35px;
+    left: 30%;
+    animation-delay:5.5s;
+}
+.showcasebox .box_areas li:nth-child(4){
+    width: 15px;
+    height: 15px;
+    left: 45%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+.showcasebox .box_areas li:nth-child(5){
+    width: 28px;
+    height: 28px;
+    left: 75%;
+    animation-delay: 0s;
+}
+.showcasebox .box_areas li:nth-child(6){
+    width: 37px;
+    height: 37px;
+    left: 60%;
+    animation-delay: 3.5s;
+    animation-duration: 13s;
+}
+.showcasebox .box_areas li:nth-child(7){
+    width: 25px;
+    height: 25px;
+    left: 83%;
+    animation-delay: 0s;
+}
+.showcasebox .box_areas li:nth-child(8){
+    width: 35px;
+    height: 35px;
+    left: 40%;
+    animation-delay: 2s;
+    animation-duration: 7s;
+}
+.showcasebox .box_areas li:nth-child(9){
+    width: 55px;
+    height: 55px;
+    left: 52%;
+    animation-delay: 0s;
+}
+.showcasebox .box_areas li:nth-child(10){
+    width: 25px;
+    height: 25px;
+    left: 59%;
+    animation-delay: 3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* ..................................................... */
+
+/* hover effects to create the beautiful transition effect when we hover on somethingsp (you can change the width in hover for more effects)*/
+.title2 ul a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: crimson;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.title2 ul a:hover{
+    /* width: 100%; */
+    color: gold;
+}
+.title2 ul a:hover:after{
+    width: 100%;
+    /* color: gold; */
+}
+/* ..................................... */
+
+
+
+
+
+ 
